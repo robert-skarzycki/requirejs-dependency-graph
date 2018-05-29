@@ -9,6 +9,7 @@
     "start": "node index.js"
   },
   "dependencies": {
+    "ends-with": "^1.0.1",
     "read-dir-files": "^0.1.1"
   }
 }
