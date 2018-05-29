@@ -1,0 +1,11 @@
+{
+  "name": "requirejs-dependency-graph",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/robert-skarzycki/requirejs-dependency-graph.git",
+  "author": "Robert Skarżycki <3417357+robert-skarzycki@users.noreply.github.com>",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  }
+}
