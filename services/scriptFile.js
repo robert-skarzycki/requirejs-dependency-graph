@@ -9,14 +9,16 @@ module.exports = class ScriptFile {
     }
 
     getMatches(matchResult) {
-        var matches = [];
+        const matches = []
 
         if (!matchResult) {
             return matches;
         }
 
         for (var i = 1; i < matchResult.length; i++) {
-            matches.push(matchResult[i])
+            let dependencyRawName = matchResult[i]
+            let cleanDependencyName = dependencyRawName.replace(/^\'+|\'+$/g, '');
+            matches.push(cleanDependencyName)
         }
 
         return matches;
@@ -33,5 +35,9 @@ module.exports = class ScriptFile {
         return readFileAsync(this.filePath, 'utf8').then(content => {
             return this.getModulesFromFileContent(content)
         })
+    }
+
+    getFilePath() {
+        return this.filePath
     }
 }
